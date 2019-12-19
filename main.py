@@ -21,7 +21,6 @@ def aStar(array, start, end , x, y):
 	fScore = {start:heuristic(start, end)}
 	heappush(tempHeap, (fScore[start], start))
 	while tempHeap:
-		#print(tempHeap)
 		current = heappop(tempHeap)[1]
 		if current == end:
 			Answer = []
@@ -31,16 +30,15 @@ def aStar(array, start, end , x, y):
 			return Answer
 		finished.add(current)
 		for i, j in neighbors:
-			#print(1)
 			neighborX, neighborY = current[0] + i, current[1] + j
 			neighbor = (neighborX, neighborY)
+			if neighbor in finished :
+				continue
 			newScore = gScore[current] + heuristic(current, neighbor)
-			if 0<=neighborX<x and 0<=neighborY<y and array[neighborX][neighborY] == 1 :
-				continue
-			if neighbor in finished and neighbor in  gScore and newScore >= gScore[neighbor]:
-				continue
-			if 0<=neighborX<x and 0<=neighborY<y:
-				if  (neighbor in  gScore and newScore < gScore[neighbor]) or neighbor not in [i[1]for i in tempHeap]:
+			if 0<=neighborX<x and 0<=neighborY<y :
+				if array[neighborX][neighborY] == 1 :
+					continue
+				if  (neighbor in  gScore and newScore < gScore[neighbor]) or neighbor not in set([i[1]for i in tempHeap]):
 					pred[neighbor] = current
 					gScore[neighbor] = newScore
 					fScore[neighbor] = newScore + heuristic(neighbor, end)
