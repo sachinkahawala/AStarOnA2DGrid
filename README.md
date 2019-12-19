@@ -1,6 +1,6 @@
 # AStarOnA2DGrid
 A star algorithm implementation with python with a simple gui. 
-Thr agent has 8 possible actions including up, down, left, right and can move on any of the diagonals.
+The agent has 8 possible actions including up, down, left, right and can move on any of the diagonals.
 The grid may contain obstacles where the agent won’t be able to penetrate through. Which will be marked in green in the GUI.
 The start point of the agent is marked as blue in the GUI, the end point(target of the agent) is shown in black in the GUI.
 
@@ -15,3 +15,5 @@ A larger grid instance is shown below,
 ![image](https://user-images.githubusercontent.com/25722196/71181596-79ae5e80-229a-11ea-90c1-51bffbb4f327.png)
 
 If there are no any path available, GUI will diplay a message as "No path found". 
+
+![image](https://user-images.githubusercontent.com/25722196/71187960-1de9d280-22a6-11ea-875a-6dca29528fed.png)
