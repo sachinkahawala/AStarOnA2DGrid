@@ -15,3 +15,5 @@ A larger grid instance is shown below,
 ![image](https://user-images.githubusercontent.com/25722196/71181596-79ae5e80-229a-11ea-90c1-51bffbb4f327.png)
 
 If there are no any path available, GUI will diplay a message as "No path found". 
+
+![image](https://user-images.githubusercontent.com/25722196/71187960-1de9d280-22a6-11ea-875a-6dca29528fed.png)
